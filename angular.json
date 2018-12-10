@@ -2,5 +2,409 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "abcfoundry-core-ui-showcase-material": {
+      "root": "projects/abcfoundry-core-ui-showcase-material/",
+      "sourceRoot": "projects/abcfoundry-core-ui-showcase-material/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/abcfoundry-core-ui-showcase-material",
+            "index": "projects/abcfoundry-core-ui-showcase-material/src/index.html",
+            "main": "projects/abcfoundry-core-ui-showcase-material/src/main.ts",
+            "polyfills": "projects/abcfoundry-core-ui-showcase-material/src/polyfills.ts",
+            "tsConfig": "projects/abcfoundry-core-ui-showcase-material/tsconfig.app.json",
+            "assets": [
+              "projects/abcfoundry-core-ui-showcase-material/src/favicon.ico",
+              "projects/abcfoundry-core-ui-showcase-material/src/assets"
+            ],
+            "styles": [
+              "projects/abcfoundry-core-ui-showcase-material/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/abcfoundry-core-ui-showcase-material/src/environments/environment.ts",
+                  "with": "projects/abcfoundry-core-ui-showcase-material/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "abcfoundry-core-ui-showcase-material:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "abcfoundry-core-ui-showcase-material:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "abcfoundry-core-ui-showcase-material:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/abcfoundry-core-ui-showcase-material/src/test.ts",
+            "polyfills": "projects/abcfoundry-core-ui-showcase-material/src/polyfills.ts",
+            "tsConfig": "projects/abcfoundry-core-ui-showcase-material/tsconfig.spec.json",
+            "karmaConfig": "projects/abcfoundry-core-ui-showcase-material/karma.conf.js",
+            "styles": [
+              "projects/abcfoundry-core-ui-showcase-material/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/abcfoundry-core-ui-showcase-material/src/favicon.ico",
+              "projects/abcfoundry-core-ui-showcase-material/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/abcfoundry-core-ui-showcase-material/tsconfig.app.json",
+              "projects/abcfoundry-core-ui-showcase-material/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "abcfoundry-core-ui-showcase-material-e2e": {
+      "root": "projects/abcfoundry-core-ui-showcase-material-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/abcfoundry-core-ui-showcase-material-e2e/protractor.conf.js",
+            "devServerTarget": "abcfoundry-core-ui-showcase-material:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "abcfoundry-core-ui-showcase-material:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/abcfoundry-core-ui-showcase-material-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "abcfoundry-core-ui-showcase-bootstrap": {
+      "root": "projects/abcfoundry-core-ui-showcase-bootstrap/",
+      "sourceRoot": "projects/abcfoundry-core-ui-showcase-bootstrap/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/abcfoundry-core-ui-showcase-bootstrap",
+            "index": "projects/abcfoundry-core-ui-showcase-bootstrap/src/index.html",
+            "main": "projects/abcfoundry-core-ui-showcase-bootstrap/src/main.ts",
+            "polyfills": "projects/abcfoundry-core-ui-showcase-bootstrap/src/polyfills.ts",
+            "tsConfig": "projects/abcfoundry-core-ui-showcase-bootstrap/tsconfig.app.json",
+            "assets": [
+              "projects/abcfoundry-core-ui-showcase-bootstrap/src/favicon.ico",
+              "projects/abcfoundry-core-ui-showcase-bootstrap/src/assets"
+            ],
+            "styles": [
+              "projects/abcfoundry-core-ui-showcase-bootstrap/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/abcfoundry-core-ui-showcase-bootstrap/src/environments/environment.ts",
+                  "with": "projects/abcfoundry-core-ui-showcase-bootstrap/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "abcfoundry-core-ui-showcase-bootstrap:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "abcfoundry-core-ui-showcase-bootstrap:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "abcfoundry-core-ui-showcase-bootstrap:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/abcfoundry-core-ui-showcase-bootstrap/src/test.ts",
+            "polyfills": "projects/abcfoundry-core-ui-showcase-bootstrap/src/polyfills.ts",
+            "tsConfig": "projects/abcfoundry-core-ui-showcase-bootstrap/tsconfig.spec.json",
+            "karmaConfig": "projects/abcfoundry-core-ui-showcase-bootstrap/karma.conf.js",
+            "styles": [
+              "projects/abcfoundry-core-ui-showcase-bootstrap/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/abcfoundry-core-ui-showcase-bootstrap/src/favicon.ico",
+              "projects/abcfoundry-core-ui-showcase-bootstrap/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/abcfoundry-core-ui-showcase-bootstrap/tsconfig.app.json",
+              "projects/abcfoundry-core-ui-showcase-bootstrap/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "abcfoundry-core-ui-showcase-bootstrap-e2e": {
+      "root": "projects/abcfoundry-core-ui-showcase-bootstrap-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/abcfoundry-core-ui-showcase-bootstrap-e2e/protractor.conf.js",
+            "devServerTarget": "abcfoundry-core-ui-showcase-bootstrap:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "abcfoundry-core-ui-showcase-bootstrap:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/abcfoundry-core-ui-showcase-bootstrap-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-abcfoundry-core-structure-material": {
+      "root": "projects/ngx-abcfoundry-core-structure-material",
+      "sourceRoot": "projects/ngx-abcfoundry-core-structure-material/src",
+      "projectType": "library",
+      "prefix": "abcfoundry",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-abcfoundry-core-structure-material/tsconfig.lib.json",
+            "project": "projects/ngx-abcfoundry-core-structure-material/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-abcfoundry-core-structure-material/src/test.ts",
+            "tsConfig": "projects/ngx-abcfoundry-core-structure-material/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-abcfoundry-core-structure-material/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-abcfoundry-core-structure-material/tsconfig.lib.json",
+              "projects/ngx-abcfoundry-core-structure-material/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-abcfoundry-core-form-material": {
+      "root": "projects/ngx-abcfoundry-core-form-material",
+      "sourceRoot": "projects/ngx-abcfoundry-core-form-material/src",
+      "projectType": "library",
+      "prefix": "abcfoundry",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-abcfoundry-core-form-material/tsconfig.lib.json",
+            "project": "projects/ngx-abcfoundry-core-form-material/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-abcfoundry-core-form-material/src/test.ts",
+            "tsConfig": "projects/ngx-abcfoundry-core-form-material/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-abcfoundry-core-form-material/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-abcfoundry-core-form-material/tsconfig.lib.json",
+              "projects/ngx-abcfoundry-core-form-material/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-abcfoundry-core-form-bootstrap": {
+      "root": "projects/ngx-abcfoundry-core-form-bootstrap",
+      "sourceRoot": "projects/ngx-abcfoundry-core-form-bootstrap/src",
+      "projectType": "library",
+      "prefix": "abcfoundry",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-abcfoundry-core-form-bootstrap/tsconfig.lib.json",
+            "project": "projects/ngx-abcfoundry-core-form-bootstrap/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-abcfoundry-core-form-bootstrap/src/test.ts",
+            "tsConfig": "projects/ngx-abcfoundry-core-form-bootstrap/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-abcfoundry-core-form-bootstrap/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-abcfoundry-core-form-bootstrap/tsconfig.lib.json",
+              "projects/ngx-abcfoundry-core-form-bootstrap/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-abcfoundry-core-structure-bootstrap": {
+      "root": "projects/ngx-abcfoundry-core-structure-bootstrap",
+      "sourceRoot": "projects/ngx-abcfoundry-core-structure-bootstrap/src",
+      "projectType": "library",
+      "prefix": "abcfoundry",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-abcfoundry-core-structure-bootstrap/tsconfig.lib.json",
+            "project": "projects/ngx-abcfoundry-core-structure-bootstrap/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-abcfoundry-core-structure-bootstrap/src/test.ts",
+            "tsConfig": "projects/ngx-abcfoundry-core-structure-bootstrap/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-abcfoundry-core-structure-bootstrap/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-abcfoundry-core-structure-bootstrap/tsconfig.lib.json",
+              "projects/ngx-abcfoundry-core-structure-bootstrap/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "abcfoundry-core-ui-showcase-material"
 }

@@ -17,6 +17,32 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-abcfoundry-core-structure-material": [
+        "dist/ngx-abcfoundry-core-structure-material"
+      ],
+      "ngx-abcfoundry-core-structure-material/*": [
+        "dist/ngx-abcfoundry-core-structure-material/*"
+      ],
+      "ngx-abcfoundry-core-form-material": [
+        "dist/ngx-abcfoundry-core-form-material"
+      ],
+      "ngx-abcfoundry-core-form-material/*": [
+        "dist/ngx-abcfoundry-core-form-material/*"
+      ],
+      "ngx-abcfoundry-core-form-bootstrap": [
+        "dist/ngx-abcfoundry-core-form-bootstrap"
+      ],
+      "ngx-abcfoundry-core-form-bootstrap/*": [
+        "dist/ngx-abcfoundry-core-form-bootstrap/*"
+      ],
+      "ngx-abcfoundry-core-structure-bootstrap": [
+        "dist/ngx-abcfoundry-core-structure-bootstrap"
+      ],
+      "ngx-abcfoundry-core-structure-bootstrap/*": [
+        "dist/ngx-abcfoundry-core-structure-bootstrap/*"
+      ]
+    }
   }
 }
