@@ -1,11 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {BaseInputComponent} from '../base-input/base-input.component';
 
 @Component({
   selector: 'abcfoundry-input-text',
   template: `
     <mat-form-field appearance="{{appearance}}">
-      <mat-label>{{label}}</mat-label>
       <input matInput placeholder="{{ placeHolder}}" value="{{ value}}" class="abcfoundry-input-text">
+      <mat-label>{{label}}</mat-label>
       <mat-icon matPrefix *ngIf="iconAlign =='left'">{{icon}}</mat-icon>
       <mat-icon matSuffix *ngIf="iconAlign =='right'">{{icon}}</mat-icon>
       <mat-hint>{{ hint}}</mat-hint>
@@ -13,17 +14,13 @@ import {Component, Input, OnInit} from '@angular/core';
   `,
   styles: []
 })
-export class InputTextComponent implements OnInit {
+export class InputTextComponent extends BaseInputComponent implements OnInit {
 
-  @Input() label: string;
-  @Input() value: string;
-  @Input() placeHolder: string;
-  @Input() hint: string;
-  @Input() appearance: string;
-  @Input() icon: string;
-  @Input() iconAlign: string;
 
-  constructor() { }
+
+  constructor() {
+    super();
+  }
 
   ngOnInit() {
   }
