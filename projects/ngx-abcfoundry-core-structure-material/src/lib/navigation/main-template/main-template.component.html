@@ -1,0 +1,45 @@
+
+<!-- Side Navigation Menu-->
+
+<div *ngIf="hasSidenav else singleSideNav" class="abcfoundry-main-template" fxLayout="column">
+  <mat-sidenav-container
+    class=" " (backdropClick)="close('backdrop')" >
+
+    <!-- Side Navigation-->
+        <mat-sidenav #sidenav *ngIf="isOpened else isClosed">
+          <abcfoundry-nav-side (closeSidenav)="sidenav.close()"  ></abcfoundry-nav-side>
+        </mat-sidenav>
+
+        <ng-template #isClosed>
+          nav is closed
+        </ng-template>
+
+    <!-- Main Content-->
+
+        <mat-sidenav-content >
+          <abcfoundry-header-top></abcfoundry-header-top>
+          <abcfoundry-header (sidenavToggle)="sidenav.toggle()" class="main-header" ></abcfoundry-header>
+          <ng-content></ng-content>
+          <abcfoundry-main-container></abcfoundry-main-container>
+          <abcfoundry-footer-top></abcfoundry-footer-top>
+          <abcfoundry-footer></abcfoundry-footer>
+          <abcfoundry-footer-bottom></abcfoundry-footer-bottom>
+        </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+
+<!--Simple Header and Menu -->
+<ng-template #singleSideNav>
+
+  <abcfoundry-header-top></abcfoundry-header-top>
+  <abcfoundry-header (sidenavToggle)="sidenav.toggle()" class="main-header" ></abcfoundry-header>
+  <abcfoundry-header-bottom></abcfoundry-header-bottom>
+  <ng-content></ng-content>
+  <abcfoundry-main-container></abcfoundry-main-container>
+  <abcfoundry-footer-top></abcfoundry-footer-top>
+  <abcfoundry-footer></abcfoundry-footer>
+  <abcfoundry-footer-bottom></abcfoundry-footer-bottom>
+
+
+</ng-template>
