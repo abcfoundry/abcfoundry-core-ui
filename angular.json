@@ -265,41 +265,6 @@
         }
       }
     },
-    "ngx-abcfoundry-core-structure-material": {
-      "root": "projects/ngx-abcfoundry-core-structure-material",
-      "sourceRoot": "projects/ngx-abcfoundry-core-structure-material/src",
-      "projectType": "library",
-      "prefix": "abcfoundry",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/ngx-abcfoundry-core-structure-material/tsconfig.lib.json",
-            "project": "projects/ngx-abcfoundry-core-structure-material/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngx-abcfoundry-core-structure-material/src/test.ts",
-            "tsConfig": "projects/ngx-abcfoundry-core-structure-material/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-abcfoundry-core-structure-material/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-abcfoundry-core-structure-material/tsconfig.lib.json",
-              "projects/ngx-abcfoundry-core-structure-material/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "ngx-abcfoundry-core-form-material": {
       "root": "projects/ngx-abcfoundry-core-form-material",
       "sourceRoot": "projects/ngx-abcfoundry-core-form-material/src",
@@ -397,6 +362,41 @@
             "tsConfig": [
               "projects/ngx-abcfoundry-core-structure-bootstrap/tsconfig.lib.json",
               "projects/ngx-abcfoundry-core-structure-bootstrap/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-abcfoundry-core-structure-material": {
+      "root": "projects/ngx-abcfoundry-core-structure-material",
+      "sourceRoot": "projects/ngx-abcfoundry-core-structure-material/src",
+      "projectType": "library",
+      "prefix": "abc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-abcfoundry-core-structure-material/tsconfig.lib.json",
+            "project": "projects/ngx-abcfoundry-core-structure-material/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-abcfoundry-core-structure-material/src/test.ts",
+            "tsConfig": "projects/ngx-abcfoundry-core-structure-material/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-abcfoundry-core-structure-material/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-abcfoundry-core-structure-material/tsconfig.lib.json",
+              "projects/ngx-abcfoundry-core-structure-material/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

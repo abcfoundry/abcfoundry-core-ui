@@ -1,0 +1,30 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <abc-foundry-sidebar (closeSidenav)="sidenav.close()" class="sidebar__sidebar"></abc-foundry-sidebar>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <main class="container">
+
+
+      <abc-foundry-header-top class="header__header-top" [ngStyle]="{'grid-template-columns': 'repeat(4, 1fr)'}"></abc-foundry-header-top>
+      <abc-foundry-header (sidenavToggle)="sidenav.toggle()" class="header__header"></abc-foundry-header>
+      <abc-foundry-header-bottom class="header__header-bottom"></abc-foundry-header-bottom>
+
+
+      <abc-foundry-main-top class="main__main-top"></abc-foundry-main-top>
+      <abc-foundry-main class="main__main">
+<ng-content></ng-content>
+      </abc-foundry-main>
+      <abc-foundry-main-bottom class="main__main-bottom"></abc-foundry-main-bottom>
+
+
+      <abc-foundry-footer-top class="footer__footer-top"></abc-foundry-footer-top>
+      <abc-foundry-footer class="footer__footer"></abc-foundry-footer>
+      <abc-foundry-footer-bottom class="footer__footer-bottom"></abc-foundry-footer-bottom>
+    </main>
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>

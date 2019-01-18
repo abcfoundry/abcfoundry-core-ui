@@ -5,18 +5,49 @@
 
 html, body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
   height: 100%;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
-  height: 100%;
-  background-color: burlywood;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
 
 }
+.app-toolbar {
+  flex: 1 0 10%;
+  background:red;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header {
+  flex: 1 0 10%;
+  background:red;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+.content {
+  flex: auto;
+  overflow-y: auto;
+}
+
+article {
+  background:green;
+}
+footer {
+  height: 40px;
+  background:blue;
+
+}
+
+
 
 .main-container {
 

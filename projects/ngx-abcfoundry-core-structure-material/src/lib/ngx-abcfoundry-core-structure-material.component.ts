@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'abcfoundry-ngx-abcfoundry-core-structure-material',
+  selector: 'abc-ngx-abcfoundry-core-structure-material',
   template: `
     <p>
       ngx-abcfoundry-core-structure-material works!

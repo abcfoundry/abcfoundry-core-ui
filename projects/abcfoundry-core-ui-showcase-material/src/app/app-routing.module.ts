@@ -27,7 +27,7 @@ import {ShowcaseHomeComponent} from './showcase/showcase-home/showcase-home.comp
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: ShowcaseHomeComponent },
+  { path: 'home', component: ButtonPage1Component },
   { path: 'layout/page1', component: LayoutPage1Component },
   { path: 'layout/page2', component: LayoutPage2Component },
   { path: 'layout/page3', component: LayoutPage3Component },

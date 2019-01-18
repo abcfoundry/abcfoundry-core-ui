@@ -1,0 +1,44 @@
+
+
+<mat-nav-list>
+  <a mat-list-item [routerLink]="'/input/page1'" (click)="onClose()">
+    <mat-icon>face</mat-icon>
+    <span class="nav-caption">Inputs</span>
+  </a>
+  <a mat-list-item routerLink='/button/page1' (click)="onClose()">
+    <mat-icon>input</mat-icon>
+    <span class="nav-caption">Buttons</span>
+  </a>
+  <a mat-list-item routerLink="/page3" (click)="onClose()">
+    <mat-icon>fitness_center</mat-icon>
+    <span class="nav-caption">Other1</span>
+  </a>
+  <mat-list-item>
+    <button mat-icon-button (click)="onClose()">
+      <mat-icon>eject</mat-icon>
+      <span class="nav-caption">Other</span>
+    </button>
+  </mat-list-item>
+</mat-nav-list>
+
+
+<!--
+
+<ul >
+  <li>
+    <a [routerLink]="'/input/page1'" >Inputs</a>
+  </li>
+  <li>
+    <a routerLink='/button/page1'>Buttons</a>
+  </li>
+  <li>
+    <a routerLink="/page3">Page 3</a>
+  </li>
+  <li>
+    <a routerLink="/page4">Page 4</a>
+  </li>
+  <li>
+    <a>Logout</a>
+  </li>
+</ul>
+-->

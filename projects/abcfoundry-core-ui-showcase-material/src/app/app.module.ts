@@ -26,6 +26,11 @@ import { ElementPage3Component } from './structure/elements/element-page3/elemen
 import { ElementPage4Component } from './structure/elements/element-page4/element-page4.component';
 import { ElementPage5Component } from './structure/elements/element-page5/element-page5.component';
 import { ShowcaseHomeComponent } from './showcase/showcase-home/showcase-home.component';
+import { SidenavComponent } from './showcase/sidenav/sidenav.component';
+import { ShowheaderComponent } from './showcase/showheader/showheader.component';
+import { ShowfooterComponent } from './showcase/showfooter/showfooter.component';
+import { ShowheadertopComponent } from './showcase/showheadertop/showheadertop.component';
+
 
 
 
@@ -53,6 +58,10 @@ import { ShowcaseHomeComponent } from './showcase/showcase-home/showcase-home.co
     ElementPage4Component,
     ElementPage5Component,
     ShowcaseHomeComponent,
+    SidenavComponent,
+    ShowheaderComponent,
+    ShowfooterComponent,
+    ShowheadertopComponent,
 
   ],
   imports: [

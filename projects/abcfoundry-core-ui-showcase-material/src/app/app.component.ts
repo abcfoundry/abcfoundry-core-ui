@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +24,21 @@ export class AppComponent {
     ]
   };
 
+  @Input() primaryMenu = { 'menuBlock': [
+      {
+        id : '001',
+        name : 'main menu',
+        type : 'primary',
+        position : 'flex-end',
+        logo : 'LOGO Name',
+        logoImg : '/img/img.png',
+        links : [
+          {'label' : 'Inputs A', 'route' : 'input/page1', 'icon' : 'menu'},
+          {'label' : 'Buttons B', 'route' : 'button/page1', 'icon' : 'menu'},
+          {'label' : 'Layout 4', 'route' : 'layout/page4', 'icon' : 'menu'},
+        ]}
+    ]
+  };
 
 
 }
