@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MenuService} from '../../../navigation/service/menu.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'abc-foundry-template',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoundryTemplateComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public menuService: MenuService) { }
 
   ngOnInit() {
+
   }
+
+
+  onSidenavClose($event) {
+    console.log('$$$$$$$ Backdrop event recieved');
+  this.menuService.onSidenavToggle();
+  }
+
 
 }

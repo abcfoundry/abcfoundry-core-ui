@@ -26,33 +26,33 @@ import {ShowcaseHomeComponent} from './showcase/showcase-home/showcase-home.comp
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: ButtonPage1Component },
-  { path: 'layout/page1', component: LayoutPage1Component },
-  { path: 'layout/page2', component: LayoutPage2Component },
-  { path: 'layout/page3', component: LayoutPage3Component },
-  { path: 'layout/page4', component: LayoutPage4Component },
-  { path: 'layout/page5', component: LayoutPage5Component },
-  { path: 'element/page1', component: ElementPage1Component },
-  { path: 'element/page2', component: ElementPage2Component },
-  { path: 'element/page3', component: ElementPage3Component },
-  { path: 'element/page4', component: ElementPage4Component },
-  { path: 'element/page5', component: ElementPage5Component },
-  { path: 'input/page1', component: InputPage1Component },
-  { path: 'input/page2', component: InputPage2Component },
-  { path: 'input/page3', component: InputPage3Component },
-  { path: 'input/page4', component: InputPage4Component },
-  { path: 'input/page5', component: InputPage5Component },
-  { path: 'button/page1', component: ButtonPage1Component },
-  { path: 'button/page2', component: ButtonPage2Component },
-  { path: 'button/page3', component: ButtonPage3Component },
-  { path: 'button/page4', component: ButtonPage4Component },
-  { path: 'button/page5', component: ButtonPage5Component },
-  { path: '**', component: ShowcaseHomeComponent }
+  /*{ path: '', redirectTo: '/home', pathMatch: 'full'},*/
+  { path: 'home', component: ButtonPage1Component, data: { title: 'Home', primary: 1 } },
+  { path: 'layout/page1', component: LayoutPage1Component, data: { title: 'Layout 1' }},
+  { path: 'layout/page2', component: LayoutPage2Component, data: { title: 'Layout 2' } },
+  { path: 'layout/page3', component: LayoutPage3Component, data: { title: 'Layout 3' }  },
+  /*  { path: 'layout/page4', component: LayoutPage4Component },
+ *  { path: 'layout/page5', component: LayoutPage5Component },
+    { path: 'element/page1', component: ElementPage1Component },
+    { path: 'element/page2', component: ElementPage2Component },
+    { path: 'element/page3', component: ElementPage3Component },
+    { path: 'element/page4', component: ElementPage4Component },
+    { path: 'element/page5', component: ElementPage5Component },
+    { path: 'input/page1', component: InputPage1Component },
+    { path: 'input/page2', component: InputPage2Component },
+    { path: 'input/page3', component: InputPage3Component },
+    { path: 'input/page4', component: InputPage4Component },
+    { path: 'input/page5', component: InputPage5Component },
+    { path: 'button/page1', component: ButtonPage1Component, text: 'Button 1'  },
+    { path: 'button/page2', component: ButtonPage2Component, text: 'Button 1'  },
+    { path: 'button/page3', component: ButtonPage3Component },
+    { path: 'button/page4', component: ButtonPage4Component },
+    { path: 'button/page5', component: ButtonPage5Component },
+    { path: '**', component: ShowcaseHomeComponent }*/
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: true } )],
+  imports: [RouterModule.forRoot(routes, { enableTracing: false } )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

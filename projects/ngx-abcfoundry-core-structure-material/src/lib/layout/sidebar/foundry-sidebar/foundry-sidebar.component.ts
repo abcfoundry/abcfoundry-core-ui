@@ -1,4 +1,7 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output, ViewChild} from '@angular/core';
+import {FoundryMenuPrimaryComponent} from '../../../navigation/menu/foundry-menu-primary/foundry-menu-primary.component';
+import {MenuService} from '../../../navigation/service/menu.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'abc-foundry-sidebar',
@@ -7,14 +10,22 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class FoundrySidebarComponent implements OnInit {
 
-  @Output() closeSidenav = new EventEmitter<void>();
+  constructor(private menuService: MenuService) {
 
-  constructor() { }
+  }
+
 
   ngOnInit() {
   }
 
-  onClose() {
-    this.closeSidenav.emit();
+  onToggleSidenav() {
+    this.menuService.onSidenavToggle();
   }
+
+
 }
+
+
+
+
+

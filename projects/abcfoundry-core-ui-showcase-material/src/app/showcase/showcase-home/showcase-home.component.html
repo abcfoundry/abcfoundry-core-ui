@@ -1,10 +1,8 @@
 
-<!--
 <abc-foundry-template>
 <router-outlet></router-outlet>
 </abc-foundry-template>
 
--->
 
 <!--
 <ul >
@@ -25,11 +23,12 @@
   </li>
 </ul>
 -->
-
+<!--<abc-foundry-menu-primary></abc-foundry-menu-primary>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav role="navigation">
-    <abc-foundry-sidebar (closeSidenav)="sidenav.close()" class="sidebar__sidebar">
+    <abc-foundry-sidebar [(opened)]="opened" class="sidebar__sidebar">
+      &lt;!&ndash;<abc-foundry-sidebar (closeSidenav)="sidenav.close()" class="sidebar__sidebar">&ndash;&gt;
       <app-sidenav></app-sidenav>
     </abc-foundry-sidebar>
 
@@ -59,4 +58,4 @@
   </mat-sidenav-content>
 
 
-</mat-sidenav-container>
+</mat-sidenav-container>-->

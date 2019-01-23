@@ -21,6 +21,7 @@ import { FoundryMenuSecondaryComponent } from './navigation/menu/foundry-menu-se
 import { FoundryMenuTertiaryComponent } from './navigation/menu/foundry-menu-tertiary/foundry-menu-tertiary.component';
 import { FoundryMenuSocialComponent } from './navigation/menu/foundry-menu-social/foundry-menu-social.component';
 import {RouterModule} from '@angular/router';
+import {MenuService} from './navigation/service/menu.service';
 
 @NgModule({
   declarations: [NgxAbcfoundryCoreStructureMaterialComponent, FoundryTemplateComponent, FoundryFooterComponent, FoundryFooterTopComponent, FoundryFooterBottomComponent, FoundryHeaderComponent, FoundryHeaderTopComponent, FoundryHeaderBottomComponent, FoundrySidebarComponent, FoundrySidebarTopComponent, FoundrySidebarBottomComponent, FoundryMainComponent, FoundryMainTopComponent, FoundryMainBottomComponent, FoundrySideComponent, FoundrySideSecondaryComponent, FoundryMenuPrimaryComponent, FoundryMenuSecondaryComponent, FoundryMenuTertiaryComponent, FoundryMenuSocialComponent],
@@ -47,6 +48,7 @@ import {RouterModule} from '@angular/router';
     FoundryMenuPrimaryComponent,
     FoundryMenuSecondaryComponent,
     FoundryMenuTertiaryComponent,
-    FoundryMenuSocialComponent]
+    FoundryMenuSocialComponent],
+  providers: [ ]
 })
 export class NgxAbcfoundryCoreStructureMaterialModule { }

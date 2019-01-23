@@ -1,32 +1,15 @@
 <abc-foundry-sidebar-top></abc-foundry-sidebar-top>
 <div class="sidebar__sidebar">
-  <a  routerLink="/" (click)="onClose()">
+  <a  routerLink="/" (click)=" onToggleSidenav()">
     <button mat-button color="primary">Home</button>
 
   </a>
 
 </div>
+
+
+<abc-foundry-menu-primary></abc-foundry-menu-primary>
 <ng-content></ng-content>
 
-<!--<mat-nav-list>
-  <a mat-list-item routerLink="/signup" (click)="onClose()">
-    <mat-icon>face</mat-icon>
-    <span class="nav-caption">Signup</span>
-  </a>
-  <a mat-list-item routerLink="/login" (click)="onClose()">
-    <mat-icon>input</mat-icon>
-    <span class="nav-caption">Login</span>
-  </a>
-  <a mat-list-item routerLink="/training" (click)="onClose()">
-    <mat-icon>fitness_center</mat-icon>
-    <span class="nav-caption">Training</span>
-  </a>
-  <mat-list-item>
-    <button mat-icon-button (click)="onClose()">
-      <mat-icon>eject</mat-icon>
-      <span class="nav-caption">Logout</span>
-    </button>
-  </mat-list-item>
-</mat-nav-list>-->
 
 <abc-foundry-sidebar-bottom></abc-foundry-sidebar-bottom>

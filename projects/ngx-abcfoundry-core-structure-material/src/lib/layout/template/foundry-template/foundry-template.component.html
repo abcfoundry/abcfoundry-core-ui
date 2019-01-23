@@ -1,6 +1,7 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav role="navigation">
-    <abc-foundry-sidebar (closeSidenav)="sidenav.close()" class="sidebar__sidebar"></abc-foundry-sidebar>
+<mat-sidenav-container (backdropClick)="onSidenavClose($event)">
+  <mat-sidenav #sidenav [opened]="menuService.isNavOpen$ | async" role="navigation">
+    <abc-foundry-sidebar  class="sidebar__sidebar"></abc-foundry-sidebar>
+
 
   </mat-sidenav>
   <mat-sidenav-content>
@@ -9,7 +10,7 @@
 
 
       <abc-foundry-header-top class="header__header-top" [ngStyle]="{'grid-template-columns': 'repeat(4, 1fr)'}"></abc-foundry-header-top>
-      <abc-foundry-header (sidenavToggle)="sidenav.toggle()" class="header__header"></abc-foundry-header>
+      <abc-foundry-header  class="header__header"></abc-foundry-header>
       <abc-foundry-header-bottom class="header__header-bottom"></abc-foundry-header-bottom>
 
 

@@ -1,4 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {MenuService} from '../../../navigation/service/menu.service';
 
 @Component({
   selector: 'abc-foundry-header',
@@ -7,15 +8,15 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class FoundryHeaderComponent implements OnInit {
 
-  @Output() sidenavToggle = new EventEmitter<void>();
 
-  constructor() { }
+  constructor(public menuService: MenuService) { }
 
   ngOnInit() {
   }
 
   onToggleSidenav() {
-    this.sidenavToggle.emit();
+    this.menuService.onSidenavToggle();
   }
+
 
 }
